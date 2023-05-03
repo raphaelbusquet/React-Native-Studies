@@ -1,18 +1,36 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, Platform } from 'react-native'
 import styles from './Navbar.styles'
 
 const Navbar = () => {
 
     // console.warn('Esse é um exemplo de warning...')
     
-  return (
-    <View style={styles.app}>
-        <Text>
-            This is a Navbar
-        </Text>
-    </View>
-  )
+  if (Platform.OS === 'ios') {
+    return (
+      <View style={styles.app}>
+          <Text>
+              This is a Navbar in IOS
+          </Text>
+      </View>
+    )
+  } else if (Platform.OS === 'android') {
+    return (
+      <View style={styles.app}>
+          <Text>
+              This is a Navbar in Android
+          </Text>
+      </View>
+    ) 
+  } else {
+    return (
+      <View style={styles.app}>
+          <Text>
+              This is a Navbar in nether both
+          </Text>
+      </View>
+    ) 
+  }
 }
 
 export default Navbar

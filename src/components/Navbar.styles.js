@@ -9,5 +9,10 @@ export default StyleSheet.create({
         marginBottom: '10%',
         padding: '6%',
         borderRadius: '10%',
+    },
+
+    title: {
+        fontSize: 30,
+        fontWeight: 'bold',
     }
 })
