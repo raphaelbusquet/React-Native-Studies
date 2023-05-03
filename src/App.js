@@ -1,9 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
+
+import Navbar from './components/Navbar';
+
 import React from 'react';
 import {
   StyleSheet,
   Button,
-  View,
+  View, 
   SafeAreaView,
   Text,
   Alert,
@@ -14,6 +17,7 @@ const Separator = () => <View style={styles.separator} />;
 const App = () => (
   <SafeAreaView style={styles.container}>
     <View>
+      <Navbar />
       <Text style={styles.title}>
         The title and onPress handler are required. It is recommended to set
         accessibilityLabel to help make your app usable by everyone.
